@@ -45,5 +45,5 @@ If you'd like copies of all the images I've harvested, let me know. I'm keen to 
 
 All together there are about 300,000 images, comprising nearly 70gb of data.
 
-
+Here's a [sample file for each of the series](https://www.dropbox.com/sh/e6x65z73h4kmhty/AAAlub1KKQ_rsEhXwGC557cOa?dl=0) on DropBox.
 
