@@ -39,7 +39,7 @@ Here's the basic metadata for every item saved as a CSV file:
 If you'd like copies of all the images I've harvested, let me know. I'm keen to encourage further research using these files. Here are the README files for each of the image dumps:
 
 * [README-A6119](https://github.com/wragge/asio-files/blob/master/docs/README-A6119.md)
-* [README-A6122](https://github.com/wragge/asio-files/blob/master/docs/README-A6119.md)
+* [README-A6122](https://github.com/wragge/asio-files/blob/master/docs/README-A6122.md)
 * [README-A6126](https://github.com/wragge/asio-files/blob/master/docs/README-A6126.md)
 * [README-A9626](https://github.com/wragge/asio-files/blob/master/docs/README-A9626.md)
 
