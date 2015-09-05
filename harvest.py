@@ -14,6 +14,8 @@ IMAGES_DIR = 'images'
 
 IMAGE_SIZES = [(200, 200), (500, 500)]
 
+SERIES_LIST = ['A6119', 'A6122', 'A6126', 'A9626']
+
 
 class SeriesHarvester():
     def __init__(self, series, control=None):
@@ -151,12 +153,12 @@ def series_summary():
         csv_writer = csv.writer(csv_file)
         csv_writer.writerow(['series', 'total described', 'total digitised', 'percentage digitised', 'total pages digitised'])
         for series in SERIES_LIST:
-            total = items.count({'series': series['series']})
-            total_digitised = items.count({'series': series['series'], 'digitised_status': True})
-            pipe = [{"$match": {"series": series['series']}}, {"$group": {"_id": "$series", "total": {"$sum": "$digitised_pages"}}}]
+            total = items.count({'series': series})
+            total_digitised = items.count({'series': series, 'digitised_status': True})
+            pipe = [{"$match": {"series": series}}, {"$group": {"_id": "$series", "total": {"$sum": "$digitised_pages"}}}]
             total_pages = items.aggregate(pipeline=pipe).next()['total']
-            print series['series']
+            print series
             print 'Total: {}'.format(total)
             print 'Total digitised: {} ({:.2f}%)'.format(total_digitised, (total_digitised / float(total) * 100))
             print 'Total digitised pages: {}'.format(total_pages)
-            csv_writer.writerow([series['series'], total, total_digitised, '{:.2f}%'.format(total_digitised / float(total) * 100), total_pages])
+            csv_writer.writerow([series, total, total_digitised, '{:.2f}%'.format(total_digitised / float(total) * 100), total_pages])
